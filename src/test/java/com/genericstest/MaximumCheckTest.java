@@ -63,7 +63,7 @@ public class MaximumCheckTest {
 
     @Test
     public void givenMaximumStringAtThirdPosition_WhenProper_ShouldReturnSameString() {
-        String check = max.getMaximum("Apple", "Banana", "Peach");
+        String check = max.getMaximum("Apple", "Peach", "Banana");
         Assert.assertEquals("Peach",check);
     }
 }
