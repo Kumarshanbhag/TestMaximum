@@ -30,4 +30,22 @@ public class MaximumCheckTest {
         Integer check = max.getMaximum(1, 2, 3);
         Assert.assertEquals(3,check,0);
     }
+
+    @Test
+    public void givenMaximumFloatNumberAtFirstPosition_WhenProper_ShouldReturnSameNumber() {
+        Float check = max.getMaximum(3.1f, 2.1f, 1.1f);
+        Assert.assertEquals(3.1f,check,0.0f);
+    }
+
+    @Test
+    public void givenMaximumFloatNumberAtSecondPosition_WhenProper_ShouldReturnSameNumber() {
+        Float check = max.getMaximum(2.1f, 3.1f, 1.1f);
+        Assert.assertEquals(3.1f,check,0.0f);
+    }
+
+    @Test
+    public void givenMaximumFloatNumberAtThirdPosition_WhenProper_ShouldReturnSameNumber() {
+        Float check = max.getMaximum(1.1f, 2.1f, 3.1f);
+        Assert.assertEquals(3.1f,check,0.0f);
+    }
 }
