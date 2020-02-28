@@ -6,64 +6,66 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class MaximumCheckTest {
-    MaximumCheck max;
-
-    @Before
-    public void setUp() throws Exception {
-        max = new MaximumCheck();
-    }
-
     @Test
     public void givenMaximumIntegerNumberAtFirstPosition_WhenProper_ShouldReturnSameNumber() {
-        Integer check = max.getMaximum(3, 2, 1);
-        Assert.assertEquals(3,check,0);
+        MaximumCheck max = new MaximumCheck(3, 2, 1);
+        Comparable check = max.getMaximum();
+        Assert.assertEquals(3,check);
     }
 
     @Test
     public void givenMaximumIntegerNumberAtSecondPosition_WhenProper_ShouldReturnSameNumber() {
-        Integer check = max.getMaximum(2, 3, 1);
-        Assert.assertEquals(3,check,0);
+        MaximumCheck max = new MaximumCheck(2, 3, 1);
+        Comparable check = max.getMaximum();
+        Assert.assertEquals(3,check);
     }
 
     @Test
     public void givenMaximumIntegerNumberAtThirdPosition_WhenProper_ShouldReturnSameNumber() {
-        Integer check = max.getMaximum(1, 2, 3);
-        Assert.assertEquals(3,check,0);
+        MaximumCheck max = new MaximumCheck(1, 2, 3);
+        Comparable check = max.getMaximum();
+        Assert.assertEquals(3,check);
     }
 
     @Test
     public void givenMaximumFloatNumberAtFirstPosition_WhenProper_ShouldReturnSameNumber() {
-        Float check = max.getMaximum(3.1f, 2.1f, 1.1f);
-        Assert.assertEquals(3.1f,check,0.0f);
+        MaximumCheck max = new MaximumCheck(3.1f, 2.1f, 1.1f);
+        Comparable check = max.getMaximum();
+        Assert.assertEquals(3.1f,check);
     }
 
     @Test
     public void givenMaximumFloatNumberAtSecondPosition_WhenProper_ShouldReturnSameNumber() {
-        Float check = max.getMaximum(2.1f, 3.1f, 1.1f);
-        Assert.assertEquals(3.1f,check,0.0f);
+        MaximumCheck max = new MaximumCheck(2.1f, 3.1f, 1.1f);
+        Comparable check = max.getMaximum();
+        Assert.assertEquals(3.1f,check);
     }
 
     @Test
     public void givenMaximumFloatNumberAtThirdPosition_WhenProper_ShouldReturnSameNumber() {
-        Float check = max.getMaximum(1.1f, 2.1f, 3.1f);
-        Assert.assertEquals(3.1f,check,0.0f);
+        MaximumCheck max = new MaximumCheck(1.1f, 2.1f, 3.1f);
+        Comparable check = max.getMaximum();
+        Assert.assertEquals(3.1f,check);
     }
 
     @Test
     public void givenMaximumStringAtFirstPosition_WhenProper_ShouldReturnSameString() {
-        String check = max.getMaximum("Peach", "Apple", "Banana");
+        MaximumCheck max = new MaximumCheck("Peach", "Apple", "Banana");
+        Comparable check = max.getMaximum();
         Assert.assertEquals("Peach",check);
     }
 
     @Test
     public void givenMaximumStringAtSecondPosition_WhenProper_ShouldReturnSameString() {
-        String check = max.getMaximum("Apple", "Peach", "Banana");
+        MaximumCheck max = new MaximumCheck("Apple", "Peach", "Banana");
+        Comparable check = max.getMaximum();
         Assert.assertEquals("Peach",check);
     }
 
     @Test
     public void givenMaximumStringAtThirdPosition_WhenProper_ShouldReturnSameString() {
-        String check = max.getMaximum("Apple", "Peach", "Banana");
+        MaximumCheck max = new MaximumCheck("Banana", "Apple", "Peach");
+        Comparable check = max.getMaximum();
         Assert.assertEquals("Peach",check);
     }
 }
