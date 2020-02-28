@@ -48,4 +48,22 @@ public class MaximumCheckTest {
         Float check = max.getMaximum(1.1f, 2.1f, 3.1f);
         Assert.assertEquals(3.1f,check,0.0f);
     }
+
+    @Test
+    public void givenMaximumStringAtFirstPosition_WhenProper_ShouldReturnSameString() {
+        String check = max.getMaximum("Peach", "Apple", "Banana");
+        Assert.assertEquals("Peach",check);
+    }
+
+    @Test
+    public void givenMaximumStringAtSecondPosition_WhenProper_ShouldReturnSameString() {
+        String check = max.getMaximum("Apple", "Peach", "Banana");
+        Assert.assertEquals("Peach",check);
+    }
+
+    @Test
+    public void givenMaximumStringAtThirdPosition_WhenProper_ShouldReturnSameString() {
+        String check = max.getMaximum("Apple", "Banana", "Peach");
+        Assert.assertEquals("Peach",check);
+    }
 }
