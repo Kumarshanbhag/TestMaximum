@@ -27,7 +27,12 @@ public class MaximumCheck<E extends Comparable<E>> {
             if(value[0].compareTo(max) > 0)
                 max = value[0];
         }
+        printMax(max);
         return max;
+    }
+
+    private static <E extends Comparable<E>> void printMax(E max) {
+        System.out.println("Maximum Value is : " + max);
     }
 
     public E getMaximum() {
